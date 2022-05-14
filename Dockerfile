@@ -1,3 +1,7 @@
 FROM openjdk:11-oraclelinux7
 
-CMD ["javac", "OlaUnicamp.java", "&&", "java", "OlaUnicamp"]
+COPY OlaUnicamp.java /
+
+RUN javac OlaUnicamp.java
+
+CMD ["java", "OlaUnicamp"]
